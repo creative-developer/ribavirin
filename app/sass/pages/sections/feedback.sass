@@ -1,11 +1,57 @@
 .feedback
 	background: #f7f7f7
+	padding: 15px 0
+	min-height: 1312px
+	position: relative
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 1920px
+		height: 610px
+		background: url('../img/bg/feedback-bottom.svg') no-repeat center center/cover
+		z-index: 0
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 60px
+		width: 830px
+		height: 1284px
+		background: url('../img/person/doctor.png') no-repeat center center
+		background-size: 100% 100%
+		z-index: 0
+	&__content
+		position: relative
+		z-index: 10
+	&__col-left
+		padding-left: 35px
 
 
 .feedback-form
-	&__title
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	background: #FFFFFF
+	border-radius: 40px
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+	padding: 61px 105px 88px 105px
+	width: 100%
+	max-width: 630px
 
+	&__title
+		font-weight: normal
+		font-size: 36px
+		line-height: 43px
+		color: #6F6F6F
+		margin-bottom: 43px
+		span
+			color: #59ACF4
 	&__fields-wrap
+		margin-bottom: 9px
 
 		.input-wrap
 
@@ -16,30 +62,74 @@
 		.icon
 
 	&__btn
+		font-size: 18px
+		line-height: 22px
+		padding: 33.5px 63.5px 27.5px
+		margin: 0 auto
+		margin-bottom: 32px
 
 	&__text
+		font-size: 18px
+		line-height: 22px
+		text-align: center
+		color: rgba(111, 111, 111, 0.75)
+		margin: 0 auto
 		p
+			margin-bottom: 0
 
-.advantages
+.advantages-card
+	position: absolute
+	top: 96px
+	left: 50%
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	width: 100%
+	height: 347px
+	max-width: 1420px
+	transform: translateX(calc( -50% + 7px ))
 
 	&__item
-		&-wrap
-			position: relative
-		&:after
-			content: ''
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			background: #000
+		background: #FFFFFF
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+		border-radius: 40px
+		&:nth-child(2)
+			align-self: center
+			margin-top: 25px
+			margin-left: -21px
+			.advantages-card
+				&__wrap
+					padding: 16.5px 49px 16.5px 71px
+		&:nth-child(3)
+			align-self: flex-end
+
+	&__wrap
+		padding: 16.5px 49px 16.5px 80px
+		position: relative
 		&:before
 			content: ''
 			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			background: #000
+			top: 50%
+			left: 15px
+			width: 45px
+			height: 45px
+			background: rgba(63, 140, 224, 0.2)
+			transform: translateY(-50%)
+			border-radius: 50%
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 29px
+			width: 17px
+			height: 17px
+			background: #3F8CE0
+			transform: translateY(-50%)
+			border-radius: 50%
 
 	&__text
+		font-weight: normal
+		font-size: 18px
+		line-height: 22px
+		color: #6F6F6F
+
