@@ -1,0 +1,25 @@
+section.b-feedback
+	.container
+		.row
+			.col-6
+				form.b-feedback-form
+					h3._title
+					._fields-wrap
+						+input('text', 'name', 'name', 'Имя', 'person', true)
+						+input('email', 'email', 'email', 'Почта', 'email', true)
+						+input('text', 'question', 'question', 'Задайте вопрос', 'question', true)
+					button._btn.btn(type="submit") Получить консультацию
+					._text
+						p Нажимая на кнопку, Вы даёте согласие на<br> обработку персональных данных
+		.row
+			.col-12
+				ul.b-advantages-card
+					li._item
+						._wrap
+							._text
+					li._item
+						._wrap
+							._text
+					li._item
+						._wrap
+							._text

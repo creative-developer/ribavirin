@@ -1,0 +1,52 @@
+footer.b-footer
+	.b-navigation
+			.container
+				.row
+					.col-3
+						a._logo-wrap(href="#")
+							img._logo(src="img/logo/logo.svg", alt="")
+					.col-9
+						nav.b-menu
+							ul._list
+								li._item
+									a._link(href="#") Кому подходит
+								li._item
+									a._link(href="#") Применение
+								li._item
+									a._link(href="#") Состав
+								li._item
+									a._link(href="#") Форма выпуска
+								li._item
+									a._link(href="#") Купить
+
+
+|
+|
+|
+// Request popup
+.b-mfp.-request-popup.zoom-anim-dialog.mfp-hide#request
+	form._form
+		+input('text','name','Имя','Ваше имя', true)
+		+input('text','phone','Телефон','Телефон', false)
+		button.btn Send
+		.b-form-result
+			.b-mess
+				._title Success!
+				._desc We will contact with you soon
+
+|
+|
+|
+// Success popup
+.b-mfp.-succes-popup.zoom-anim-dialog.mfp-hide#success
+	.b-form-result.-success
+		.b-mess
+			._title Success!
+			._desc We will contact with you soon
+
+|
+|
+|
+// Scripts
+script(src="js/libs.min.js")
+script(src="js/main.min.js")

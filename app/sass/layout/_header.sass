@@ -1,0 +1,37 @@
+.header
+	padding: 10px 0
+	transition: all 0.3s ease
+	position: fixed
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	width: 100%
+	max-width: 1920px
+	z-index: 3
+	&__row
+		align-items: center
+	&--scrolled
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
+		background: #fff
+	&__logo
+		&-wrap
+			// height: 100%
+			display: inline-block
+
+.menu
+	&__list
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	&__item
+		&:not(:last-child)
+			margin-right: 65px
+
+	&__link
+		font-weight: 600
+		font-size: 15px
+		line-height: 18px
+		color: #6F6F6F
+		&:hover
+			color: #59ACF4

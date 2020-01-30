@@ -1,0 +1,32 @@
+include ../layout/_mixins
+
+doctype html
+html(lang="ru")
+	- var title = 'Main | Company name'
+	include ../layout/_head
+	
+	body
+		|
+		|
+		|
+		// Header
+		include ../layout/_header
+
+		|
+		|
+		|
+		// Section
+		main.b-main-wrapper
+			include ./sections/main
+			include ./sections/product
+			include ./sections/feedback
+			include ./sections/faq
+			include ./sections/product-composition
+			include ./sections/order
+			include ./sections/where-buy
+
+		|
+		|
+		|
+		// Footer
+		include ../layout/_footer
