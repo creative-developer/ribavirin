@@ -175,6 +175,39 @@ $('.tabs__link').click(function(e) {
 	}
 });
 
+// QTY change
+// increment
+$('.qty__plus').click(function (e) { 
+	e.preventDefault();
+	const input = $(this).siblings('input');
+	
+	input.val(parseInt(input.val()) + 1)
+
+	priceCalc();
+});
+// decrement
+$('.qty__minus').click(function (e) { 
+	e.preventDefault();
+	const input = $(this).siblings('input');
+
+	if (parseInt(input.val()) >= 2) {
+		input.val(parseInt(input.val()) - 1)
+	} else {
+		input.val(1)
+	}
+
+	priceCalc();
+});
+
+
+function priceCalc() {
+	const priceEl = $('.price__amount');
+	const price = priceEl.attr('data-price');
+	const calcPrice = price * Math.ceil($('.qty input').val());
+
+	priceEl.children('.val').html(calcPrice.toFixed(2));
+}
+
 ////////// Ready Functions
 $(document).ready(function () {
 	//

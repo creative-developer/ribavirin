@@ -5,15 +5,36 @@ section.b-order
 				h2._title Купи 
 					span сейчас 
 					| и поспособствуй <br/> в борьбе с Coronaviridae
-		.row
-			.col-12
-				form.b-order-form
-					._row
-						._col
-							._fields-wrap
-								+input('text', 'name', 'name', 'Имя', 'person', true)
-								+input('text', 'phone', 'phone', 'Телефон', 'phone', true)
-								+input('text', 'delivery', 'delivery', 'Адрес доставки', 'delivery', true)
-						._col
-							._small-title
-							
+		
+		form.b-order-form._form
+			._col
+				+input('text', 'name', 'name', 'Имя', 'person', true)
+				+input('text', 'phone', 'phone', 'Телефон', 'phone', true)
+				+input('text', 'delivery', 'delivery', 'Адрес доставки', 'delivery', true)
+			._col
+				.b-qty._qty
+					._label Кол-во пачек
+					._wrap
+						button(type="button")._minus -
+						input(type="text", name="qty", value="1")
+						button(type="button")._plus +
+				
+				.b-price
+					._label Стоимость
+					._amount(data-price="49.99")
+						span.val 49.99
+						span.curr $
+				
+				button.btn._btn ПЕРЕЙТИ К ОПЛАТЕ
+
+			._delivery
+				span Доставка<br/> до
+				strong 3-x
+				span дней
+			
+			._logo
+				img(src="img/order/medicine.png", alt="")
+			
+			._shadow
+				
+		//- form.ya-form
