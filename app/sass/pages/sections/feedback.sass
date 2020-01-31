@@ -4,6 +4,11 @@
 	min-height: 1312px
 	position: relative
 	z-index: 1
+	+xxl
+		padding: 60px 0 80px
+	+lg
+		padding: 0 0 80px
+
 	&:after
 		content: ''
 		position: absolute
@@ -24,11 +29,42 @@
 		background: url('../img/person/doctor.png') no-repeat center center
 		background-size: 100% 100%
 		z-index: 0
+		+xxl
+			right: auto
+			left: 50%
+			transform: translateX(-50%)
+			width: 100%
+			max-width: 600px
+			height: 980px
+			object-fit: cover
+		+lg
+			max-width: 450px
+			height: 800px
+		+md
+			max-width: 440px
+			height: 700px
+		+sm
+
+
+
 	&__content
 		position: relative
 		z-index: 10
+
 	&__col-left
 		padding-left: 35px
+		+xxl
+			margin-bottom: 930px
+			display: flex
+			justify-content: center
+		+lg
+			margin-bottom: 750px
+			padding-left: 15px
+		+md
+			margin-bottom: 500px
+	&__row
+		+xxl
+			justify-content: center
 
 
 .feedback-form
@@ -41,6 +77,18 @@
 	padding: 61px 105px 88px 105px
 	width: 100%
 	max-width: 630px
+	+lg
+		padding: 40px 80px 60px 80px
+	+md
+		box-shadow: none
+		background: transparent
+		border-radius: 0
+		padding: 0 0px 60px 0px
+	+sm
+		// padding: 0 0px 60px 0px
+	
+
+
 
 	&__title
 		font-weight: normal
@@ -48,14 +96,28 @@
 		line-height: 43px
 		color: #6F6F6F
 		margin-bottom: 43px
+		+lg
+			font-size: 28px
+			line-height: 34px
+			margin-bottom: 30px
+		+sm
+			font-size: 24px
+			line-height: 29px
+			color: #6F6F6F
 		span
 			color: #59ACF4
 	&__fields-wrap
 		margin-bottom: 9px
+		+xxl
+			width: 100%
 
 		.input-wrap
+			+xxl
+				max-width: 100%
 
 			input
+				+md
+					background: transparent
 
 		.input-icon
 
@@ -67,6 +129,14 @@
 		padding: 33.5px 63.5px 27.5px
 		margin: 0 auto
 		margin-bottom: 32px
+		+xxl
+			width: 100%
+		+lg
+			padding: 23.5px 63.5px 17.5px
+			font-size: 16px
+		+sm
+			font-size: 12px
+			line-height: 14px
 
 	&__text
 		font-size: 18px
@@ -88,24 +158,48 @@
 	height: 347px
 	max-width: 1420px
 	transform: translateX(calc( -50% + 7px ))
+	+xxl
+		top: auto
+		bottom: 0
+	+lg
+		max-width: 100%
+		justify-content: flex-start
+		flex-direction: column
+		height: auto
+	+lg
+		bottom: -80px
+	+sm
+		bottom: auto
+		top: 0
 
 	&__item
 		background: #FFFFFF
 		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
 		border-radius: 40px
+		&:not(:last-child)
+			+lg
+				margin-bottom: 17px
 		&:nth-child(2)
 			align-self: center
 			margin-top: 25px
 			margin-left: -21px
+			+lg
+				margin-top: 0
+				margin-left: 0
 			.advantages-card
 				&__wrap
 					padding: 16.5px 49px 16.5px 71px
 		&:nth-child(3)
 			align-self: flex-end
+			+lg
+				align-self: flex-start
 
 	&__wrap
 		padding: 16.5px 49px 16.5px 80px
 		position: relative
+		+lg
+			// padding: 16.5px 49px 16.5px 71px
+
 		&:before
 			content: ''
 			position: absolute
@@ -132,4 +226,7 @@
 		font-size: 18px
 		line-height: 22px
 		color: #6F6F6F
+		br
+			+lg
+				// display: none
 

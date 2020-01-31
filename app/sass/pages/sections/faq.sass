@@ -2,6 +2,8 @@
 	padding: 2px 0 105px
 	+lg
 		padding: 2px 0 0px
+	+sm
+		padding: 132px 0 0px
 
 	&__title
 		font-weight: normal
@@ -29,6 +31,30 @@
 			line-height: 22px
 			padding-left: 33px
 			margin-bottom: 12px
+	&__mobile-title
+		position: relative
+		font-size: 24px
+		line-height: 29px
+		text-align: center
+		color: #6F6F6F
+		display: none
+		margin-bottom: 45px
+		text-align: center
+		&:after
+			content: ''
+			position: absolute
+			top: -40px
+			left: 50%
+			transform: translateX(-50%)
+			width: 61px
+			height: 2px
+			background: rgba(89, 172, 244, 0.5)
+			border-radius: 2px
+			display: none
+			+sm
+				display: block
+		+sm
+			display: block
 
 	&__right-col
 		padding: 115px 0 0 120px

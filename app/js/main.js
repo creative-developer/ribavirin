@@ -106,6 +106,36 @@ function faqCollapse() {
 };
 faqCollapse();
 
+let articleList = $('.mobile-carousel');
+let owlSettings = {
+	loop: true,
+	items: 3,
+	margin: 0,
+	nav: false,
+	dots: true
+}
+// function articleSlider(){
+// 	if ($('body').width() <= 576 ) {
+// 		initOwl();
+// 	} else {
+// 		reInitOwl();
+// 	}
+// }
+
+// articleSlider();
+
+// $(window).on('resize', function () {
+// 	articleSlider();
+// });
+
+function initOwl() {
+	articleList.owlCarousel(owlSettings).addClass('owl-carousel').trigger('refresh.owl.carousel');
+}
+
+function reInitOwl() {
+	articleList.trigger('destroy.owl.carousel').removeClass('owl-carousel');
+}
+
 // E-mail Ajax Send
 $('form:not(#ya-form)').submit(function (e) {
 	e.preventDefault();

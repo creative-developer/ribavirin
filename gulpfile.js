@@ -25,7 +25,7 @@ function jsLibs() {
 	return src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		// 'app/libs/owl.carousel/dist/owl.carousel.min.js',
+		'app/libs/owl.carousel/dist/owl.carousel.min.js',
 		// 'app/libs/fancybox/dist/jquery.fancybox.min.js',
 		'app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js',
 	])
@@ -39,7 +39,7 @@ function jsLibs() {
 function cssLibs() {
 	return src([
 		'app/libs/magnific-popup/dist/magnific-popup.css',
-		// 'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
+		'app/libs/owl.carousel/dist/assets/owl.carousel.min.css',
 		// 'app/libs/fancybox/dist/jquery.fancybox.css',
 	])
 		.pipe(concat('libs.min.css'))
