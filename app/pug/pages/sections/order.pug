@@ -15,9 +15,13 @@ section.b-order
 				.b-qty._qty
 					._label Кол-во пачек
 					._wrap
-						button(type="button")._minus -
+						button(type="button")._minus
+							+icon('minus')
+						
 						input(type="text", name="qty", value="1")
-						button(type="button")._plus +
+
+						button(type="button")._plus
+							+icon('plus')
 				
 				.b-price._price
 					._label Стоимость
