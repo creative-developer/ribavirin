@@ -1,6 +1,16 @@
 .main
 	padding-top: 149px
 	background: #f7f7f7
+	+xxl
+		padding-top: 129px
+	+xl
+		padding-top: 109px
+	+lg
+		padding-top: 99px
+	+md
+		padding-top: 89px
+	+sm
+		padding-top: 76px
 
 	&__row
 		justify-content: space-between
@@ -10,14 +20,40 @@
 			max-width: 605px
 			padding: 0 15px
 			padding-top: 35px
+			+xxl
+				flex: 1 1 45%
+				max-width: 45%
+			+lg
+				flex: 1 1 100%
+				max-width: 100%
+			+xsm
+				flex: 1 1 340px
+				max-width: 340px
+				
 		&-right
 			flex: 1 1 831px
 			max-width: 831px
 			padding: 0 15px
+			+xxl
+				flex: 1 1 55%
+				max-width: 55%
+			+lg
+				flex: 1 1 100%
+				max-width: 100%
 			
 
 	&__title
 		margin-bottom: 60px
+		+xl
+			margin-bottom: 50px
+		+lg
+			margin-bottom: 35px
+		+md
+			margin-bottom: 30px
+		+sm
+			margin-bottom: 20px
+		+xsm
+			max-width: 300px
 		span
 			color: #71B7F8
 
@@ -27,14 +63,40 @@
 		color: #6F6F6F
 		font-weight: normal
 		margin-bottom: 74px
+		br
+			+xl
+				display: none
+		+lg
+			margin-bottom: 35px
+		+sm
+			font-size: 16px
+			line-height: 19px
 
 
 	&__btn
 		margin-bottom: 137px
+		+xl
+			font-size: 18px
+			line-height: 19px
+			padding: 28.5px 70px 24.5px
+		+lg
+			margin-bottom: 80px
+		+sm
+			font-size: 14px
+			line-height: 17px
+			padding: 22px 70px 20px
+			margin-bottom: 60px
+		+xsm
+			display: block
+			margin-left: auto
+			max-width: 285px
 
 	&__img-wrap
 		margin-left: -151px
-
+		+lg
+			margin-left: -61px
+		+sm
+			margin-left: -50px
 	&__img
 
 
@@ -51,6 +113,10 @@
 		line-height: 29px
 		color: rgba(111, 111, 111, 0.75)
 		padding-top: 56px
+		&:not(:last-child)
+			+xl
+				margin-right: 20px
+
 		&:after
 			content: ''
 			position: absolute

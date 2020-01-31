@@ -1,6 +1,8 @@
 .footer
 	position: relative
 	padding: 40px 0
+	+lg
+		padding: 21px 0
 	&:after
 		content: ''
 		position: absolute
@@ -14,3 +16,11 @@
 
 	&__row
 		align-items: center
+	.menu
+		+lg
+			display: none
+		&__item
+			&:not(:last-child)
+				+xl
+					margin-right: 40px
+	

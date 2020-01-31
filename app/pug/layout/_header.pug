@@ -1,10 +1,14 @@
 header.b-header
 	.container
 		.row._row
-			.col-3
+			.col-6.col-lg-3
 				a._logo-wrap(href="#")
 					img._logo(src="img/logo/logo.svg", alt="")
-			.col-9
+				button.hamburger.hamburger--slider.js-menu(type='button')
+					span.hamburger-box
+						span.hamburger-inner
+
+			.col-6.col-lg-9
 				nav.b-menu
 					ul._list
 						li._item
@@ -17,3 +21,5 @@ header.b-header
 							a._link(href="#use") Форма выпуска
 						li._item
 							a._link(href="#order") Купить
+				._mobile-basket
+					+icon('basket')

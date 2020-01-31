@@ -77,6 +77,7 @@ $('.js-scroll, .menu__link').click(function(event) {
 	event.preventDefault();
 	var el = $(this).attr('href').replace('#','.');
 	var headerTopOffset = $('.header').outerHeight();
+
 	$('body, html').animate(
 		{
 			scrollTop: $(el).offset().top - headerTopOffset

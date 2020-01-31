@@ -8,30 +8,108 @@
 	width: 100%
 	max-width: 1920px
 	z-index: 3
+	+lg
+		padding: 30px 0
 	&__row
 		align-items: center
 	&--scrolled
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
 		background: #fff
+		padding: 15px 0
 	&__logo
 		&-wrap
-			// height: 100%
 			display: inline-block
+			+lg
+				display: none
 
+	&__mobile-basket
+		display: none
+		justify-content: flex-end
+		align-items: center
+		position: relative
+		z-index: 1
+		.icon
+			width: 33px
+			height: 33px
+			fill: rgba(111, 111, 111, 0.5)
+		+lg
+			display: flex
+			
+	.menu
+		+lg
+			position: fixed
+			top: 0
+			left: 50%
+			transform: translate(-50%, -100%)
+			width: 100%
+			background: #fff
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12)
+			padding: 50px 0 50px
+			transition: all .6s cubic-bezier(.57,.04,.46,.98)
+		&.opened
+			+lg
+				transform: translate(-50%, 0)
+			.menu
+				&__item
+					+lg
+						opacity: 1
+						transform: translateY(0)
+						@for $i from 1 through 5
+							&:nth-child(#{$i}) 
+								transition-delay: 0.3s + ($i*0.1s)
+
+		&__list
+			+lg
+				flex-direction: column
+				justify-content: flex-start
+				align-items: center
+
+		&__item
+			&:not(:last-child)
+				+xl
+					margin-right: 40px
+				+lg
+					margin-right: 0
+					margin-bottom: 39px
+				+md
+					margin-bottom: 25px
 .menu
+
 	&__list
 		display: flex
 		align-items: center
 		justify-content: flex-end
 
+
 	&__item
+		+lg
+			opacity: 0
+			transform: translateY(30px)
+			transition: all .6s cubic-bezier(.57,.04,.46,.98)
 		&:not(:last-child)
 			margin-right: 65px
+		&--active
+			.menu__link
+				color: #59ACF4
+
 
 	&__link
 		font-weight: 600
 		font-size: 15px
 		line-height: 18px
 		color: #6F6F6F
+		text-transform: uppercase
 		&:hover
 			color: #59ACF4
+
+
+.hamburger
+	display: none
+	+lg
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 1
+		position: relative
+		&:focus
+			outline: none
