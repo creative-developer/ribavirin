@@ -1,7 +1,7 @@
 ////////// Popup
 .mfp
 	position: relative
-	max-width: 345px
+	max-width: 630px
 	min-height: 420px
 	text-align: left
 	padding: 0
@@ -9,7 +9,7 @@
 	margin: 2.5rem auto
 	background: tranparent
 	+md
-		max-width: 450px
+		max-width: 345px
 
 	.mfp-close
 		top: 5px
@@ -22,28 +22,47 @@
 			transform: translateY(1px)
 
 	.feedback-form
-		padding: 43px 46px 43px 47px
+		+sm
+			padding: 43px 46px 43px 47px
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+			border-radius: 20px
 		&__title
-			font-size: 24px
-			line-height: 29px
+			+sm
+				font-size: 24px
+				line-height: 29px
+				margin-bottom: 29px 
 		&__desc
+		&__fields-wrap
+			+sm
+				width: 100%
+				margin-bottom: 25px
 		.input-wrap
+			+sm
+				margin-bottom: 20px
+			&:last-child
+				+sm
+					margin-bottom: 0
 			input
-				font-size: 14px
-				line-height: 17px
-				padding: 9px 25px 9px 45px
+				+sm
+					font-size: 14px
+					line-height: 17px
+					padding: 12px 25px 12px 45px
 		.input-icon
-			left: 6px
+			+sm
+				left: 6px
 			.icon
-				width: 25px
-				height: 25px
+				+sm
+					width: 25px
+					height: 25px
 		&__btn
-			font-size: 12px
-			line-height: 14px
-			padding: 22px 38px
+			+sm
+				font-size: 12px
+				line-height: 14px
+				padding: 22px 38px
 		&__text
-			font-size: 10px
-			line-height: 12px
+			+sm
+				font-size: 10px
+				line-height: 12px
 
 
 
@@ -59,33 +78,52 @@
 	text-align: center
 	background: #fff
 	opacity: 0
-	padding: 50px
+	padding: 89px 58px 47px
+	border-radius: 20px
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
 	visibility: hidden
 	transition: all .3s ease
 	z-index: 1
+	+sm
+		padding: 39px 45px 27px
+		border-radius: 20px
 	.mess
 		&__title
-			font-size: 42px
-			line-height: 47px
-			font-weight: 600
-			margin-bottom: 10px
+			font-weight: normal
+			text-align: center
+			color: #6F6F6F
+			opacity: 0
+			transform: translateY(50px)
+			transition: all .6s ease
+			font-size: 48px
+			line-height: 58px
+			margin-bottom: 48px
+			+sm
+				font-size: 24px
+				line-height: 29px
+				margin-bottom: 23px
+			+xsm
+				margin-bottom: 5px
+
+		&__desc
+			font-weight: normal
+			font-size: 24px
+			line-height: 29px
+			text-align: center
+			margin-bottom: 68px
+			color: rgba(111, 111, 111, 0.75)
 			opacity: 0
 			transform: translateY(50px)
 			transition: all .6s ease
 			+sm
-				font-size: 30px
-			+xsm
-				font-size: 25px
-				margin-bottom: 5px
-
-		&__desc
-			font-size: 22px
-			line-height: 27px
-			opacity: 0
-			transform: translateY(50px)
-			transition: all .6s ease
-			+xsm
-				font-size: 16px
+				font-size: 12px
+				line-height: 14px
+				margin-bottom: 34px
+		&__img-wrap
+			+sm
+				width: 66px
+				height: 70px
+				margin: 0 auto
 	
 	// &--success
 	&--success

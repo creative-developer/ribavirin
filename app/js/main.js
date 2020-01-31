@@ -73,14 +73,16 @@ $(window).scroll(function () {
 });
 
 // Smooth scroll
-$('.menu__link').click(function (event) {
+$('.js-scroll, .menu__link').click(function(event) {
 	event.preventDefault();
-	let el = $(this).attr('href');
-	let headerTopOffset = 70;
-
-	$('body, html').animate({
-		scrollTop: $(el).offset().top - headerTopOffset
-	}, 700);
+	var el = $(this).attr('href').replace('#','.');
+	var headerTopOffset = $('.header').outerHeight();
+	$('body, html').animate(
+		{
+			scrollTop: $(el).offset().top - headerTopOffset
+		},
+		700
+	);
 
 	return false;
 });
