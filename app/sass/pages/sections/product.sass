@@ -1,7 +1,7 @@
 .product
 	padding: 287px 0
 	position: relative
-	z-index: 1
+	z-index: 2
 	background: #f7f7f7
 	// min-height: 1500px
 	+xxl
@@ -10,13 +10,13 @@
 		padding-bottom: 180px
 	+lg
 		padding-top: 0
-		padding-bottom: 100px
+		padding-bottom: 40px
 	+md
 		padding-bottom: 70px
 	+sm
 		padding-bottom: 40px
 	+xsm
-		padding-bottom: 20px
+		padding-bottom: 68px
 
 	&:after
 		content: ''
@@ -43,17 +43,29 @@
 			background: url('../img/bg/product-bg-mobile.svg') no-repeat center center
 			transform: translateX(-50%)
 			top: 0
+	&:before
+		content: ''
+		position: absolute
+		bottom: 40px
+		left: 50%
+		transform: translateX(-50%)
+		width: calc( 100% - 30px )
+		height: 1px
+		background: rgba(111, 111, 111, 0.25)
+		z-index: 3
 
 	&__row
 		justify-content: center
 		+xxl
 			padding-top: 50px
 		+xl
-			padding-top: 105px
+			// padding-top: 105px
+			padding-top: 85px
 		+md
 			padding-top: 55px
 		+sm
 			padding-top: 135px
+			justify-content: flex-start
 		+xsm
 			padding-top: 160px
 
@@ -76,9 +88,10 @@
 				max-width: 50%
 				justify-content: flex-start
 				padding-top: 120px
-			+xsm
+			+sm
 				flex: 1 1 40%
 				max-width: 40%
+			+xsm
 
 		&:nth-child(2)
 			flex: 1 1 430px
@@ -110,9 +123,11 @@
 				padding-top: 170px
 			+md
 				padding-top: 150px
-			+xsm
+			+sm
+				align-self: flex-start
 				flex: 1 1 60%
 				max-width: 60%
+			+xsm
 
 		&:nth-child(4)
 			display: none
