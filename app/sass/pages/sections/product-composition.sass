@@ -1,0 +1,105 @@
+.composition
+	position: relative
+	padding: 65px 0 344px
+	background: url(../img/composition/bg.jpg) no-repeat top center
+	background-size: cover
+	
+	&__title
+		text-align: center
+		margin-bottom: 133px
+	
+	&__illustration
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 746px
+		height: 746px
+		margin: 0 auto 72px
+		z-index: 1
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 50%
+			border: 1px solid #fff
+			z-index: -1
+		&::before
+			width: 100%
+			height: 100%
+		&::after
+			width: 57%
+			height: 57%
+	
+	&__capsule
+		width: 923px
+		margin: 113px 0 0 -92px
+		img
+			max-width: none
+			// height: 609px
+	
+	&__bottom-text
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #ffffff
+		padding-left: 74px
+		&-col
+			&:nth-child(1)
+				font-size: 144px
+				line-height: 144px
+				margin-right: 60px
+			&:nth-child(2)
+				font-size: 28px
+				line-height: 34px
+				margin-bottom: 16px
+
+
+.composition-item
+	position: absolute
+	display: flex
+	align-items: center
+	width: 520px
+	z-index: 2
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 76px
+		width: 76px
+		height: 76px
+		margin-right: 10px
+		border-radius: 50%
+		border: 1px solid #fff
+		.icon
+			width: 36px
+			height: 36px
+			fill: #ffffff
+	&__desc
+		font-size: 24px
+		line-height: 29px
+		color: #ffffff
+		margin-top: 6px
+
+	// positions
+	&:nth-child(1)
+		top: 7px
+		right: -288px
+		.composition-item__icon
+			background: #73b8ef
+	&:nth-child(2)
+		top: 335px
+		left: -296px
+		.composition-item__icon
+			background: #73b5e9
+		.composition-item__desc
+			order: -1
+			margin-right: 26px
+	&:nth-child(3)
+		top: 567px
+		right: -401px
+		.composition-item__icon
+			background: #387fb7
