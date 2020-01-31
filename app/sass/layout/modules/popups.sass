@@ -1,12 +1,13 @@
 ////////// Popup
 .mfp
 	position: relative
-	max-width: 40.625rem
-	min-height: 26.25rem
+	max-width: 345px
+	min-height: 420px
 	text-align: left
-	padding: 5rem 4.375rem 3.125rem
+	padding: 0
+	width: 100%
 	margin: 2.5rem auto
-	background: #fff
+	background: tranparent
 	+md
 		max-width: 450px
 
@@ -19,6 +20,32 @@
 			outline: none
 		&:active
 			transform: translateY(1px)
+
+	.feedback-form
+		padding: 43px 46px 43px 47px
+		&__title
+			font-size: 24px
+			line-height: 29px
+		&__desc
+		.input-wrap
+			input
+				font-size: 14px
+				line-height: 17px
+				padding: 9px 25px 9px 45px
+		.input-icon
+			left: 6px
+			.icon
+				width: 25px
+				height: 25px
+		&__btn
+			font-size: 12px
+			line-height: 14px
+			padding: 22px 38px
+		&__text
+			font-size: 10px
+			line-height: 12px
+
+
 
 .form-result
 	position: absolute
