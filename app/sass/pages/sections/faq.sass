@@ -1,20 +1,61 @@
 .faq
 	padding: 2px 0 105px
+	+lg
+		padding: 2px 0 0px
+
 	&__title
 		font-weight: normal
 		font-size: 48px
 		line-height: 58px
 		color: #6F6F6F
 		margin-bottom: 38px
+		position: relative
+		z-index: 3
+		br
+			display: none
+			+sm
+				display: block
+		+xl
+			font-size: 42px
+			line-height: 52px
+		+lg
+			font-size: 36px
+			line-height: 42px
+		+md
+			font-size: 32px
+			line-height: 38px
+		+sm
+			font-size: 18px
+			line-height: 22px
+			padding-left: 33px
+			margin-bottom: 12px
 
 	&__right-col
 		padding: 115px 0 0 120px
+		+lg
+			order: 0
+			padding: 15px 0 0 15px
+			margin-bottom: 60px
+		+sm
+			margin-bottom: 77px
+
+	&__left-col
+		+lg
+			order: 1
+
 
 	&__desc
 		font-weight: normal
 		font-size: 20px
 		line-height: 29px
 		color: rgba(111, 111, 111, 0.75)
+		position: relative
+		z-index: 3
+		+sm
+			padding-left: 33px
+			font-size: 12px
+			line-height: 14px
+			color: rgba(111, 111, 111, 0.5)
 		p
 			margin-bottom: 0
 
@@ -24,6 +65,9 @@
 	&__wrap
 		max-width: 380px
 		margin-left: 9px
+		+lg
+			max-width: 100%
+			margin-left: 0
 
 	&__bottom-wrap
 		position: relative
@@ -33,6 +77,11 @@
 		align-items: flex-end
 		margin-top: -7px
 		max-width: 371px
+		+lg
+			max-width: 100%
+			margin-top: 0
+		+sm
+			margin-top: -174px + 50px
 		&:after
 			content: ''
 			position: absolute
@@ -44,6 +93,10 @@
 			background: #F1F6FA
 			border-radius: 10px
 			z-index: -1
+			+lg
+				max-width: 80%
+			+sm
+				height: 280px
 
 
 	&__feedback-icon
@@ -58,6 +111,12 @@
 		top: -3px
 		left: 60px
 		transform: translateY(50%)
+		+sm
+			top: auto
+			bottom: 75px
+			left: 33px
+			width: 59px
+			height: 59px
 		&-wrap
 			display: flex
 			justify-content: center
@@ -66,10 +125,16 @@
 			height: 56px
 			background: linear-gradient(75.96deg, #59B4FC 9.29%, #70BCF6 91.25%)
 			border-radius: 50%
+			+sm
+				width: 42px
+				height: 42px
 			.icon
 				width: 21px
 				height: 21px
 				fill: #fff
+				+sm
+					width: 16px
+					height: 16px
 
 	&__img-wrap
 
@@ -81,6 +146,8 @@
 		position: relative
 		cursor: pointer
 		user-select: none
+		+sm
+			padding: 17px 12px 6px 34px
 		&:hover
 			&:after,
 			&:before
@@ -100,6 +167,8 @@
 			height: 2px
 			background: rgba(111, 111, 111, 0.25)
 			transition: all 0.3s ease
+			+sm
+				top: 25px
 		&:before
 			content: ''
 			position: absolute
@@ -109,6 +178,8 @@
 			background: rgba(111, 111, 111, 0.25)
 			left: 11px
 			transition: all 0.3s ease
+			+sm
+				top: 26px - 12px
 
 	&__item-title
 		font-weight: 600
@@ -116,6 +187,10 @@
 		line-height: 29px
 		color: #6F6F6F
 		margin-bottom: 22px !important
+		+sm
+			font-size: 18px
+			line-height: 22px
+			margin-bottom: 10px !important
 
 	&__item-desc
 		font-weight: normal
@@ -124,6 +199,9 @@
 		color: rgba(111, 111, 111, 0.5)
 		display: none
 		margin-bottom: 25px
+		+sm
+			font-size: 14px
+			line-height: 23px
 
 
 

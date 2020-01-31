@@ -22,45 +22,53 @@
 			transform: translateY(1px)
 
 	.feedback-form
-		+sm
+		+md
 			padding: 43px 46px 43px 47px
 			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
 			border-radius: 20px
+		&__wrap
+			
 		&__title
-			+sm
+			+md
 				font-size: 24px
 				line-height: 29px
 				margin-bottom: 29px 
 		&__desc
 		&__fields-wrap
-			+sm
+			+xl
+				width: 100%
+			+md
 				width: 100%
 				margin-bottom: 25px
 		.input-wrap
-			+sm
+			+xl
+				max-width: 100%
+			+md
 				margin-bottom: 20px
 			&:last-child
-				+sm
+				+md
 					margin-bottom: 0
 			input
-				+sm
+				+md
 					font-size: 14px
 					line-height: 17px
 					padding: 12px 25px 12px 45px
 		.input-icon
-			+sm
+			+md
 				left: 6px
 			.icon
-				+sm
+				+md
 					width: 25px
 					height: 25px
 		&__btn
-			+sm
+			+xl
+				width: 100%
+			+md
 				font-size: 12px
 				line-height: 14px
 				padding: 22px 38px
 		&__text
-			+sm
+			+md
 				font-size: 10px
 				line-height: 12px
 
@@ -84,7 +92,7 @@
 	visibility: hidden
 	transition: all .3s ease
 	z-index: 1
-	+sm
+	+md
 		padding: 39px 45px 27px
 		border-radius: 20px
 	.mess
@@ -98,7 +106,7 @@
 			font-size: 48px
 			line-height: 58px
 			margin-bottom: 48px
-			+sm
+			+md
 				font-size: 24px
 				line-height: 29px
 				margin-bottom: 23px
@@ -115,12 +123,12 @@
 			opacity: 0
 			transform: translateY(50px)
 			transition: all .6s ease
-			+sm
+			+md
 				font-size: 12px
 				line-height: 14px
 				margin-bottom: 34px
 		&__img-wrap
-			+sm
+			+md
 				width: 66px
 				height: 70px
 				margin: 0 auto
