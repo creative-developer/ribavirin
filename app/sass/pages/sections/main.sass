@@ -75,16 +75,9 @@
 
 	&__btn
 		margin-bottom: 137px
-		+xl
-			font-size: 18px
-			line-height: 19px
-			padding: 28.5px 70px 24.5px
 		+lg
 			margin-bottom: 80px
 		+sm
-			font-size: 14px
-			line-height: 17px
-			padding: 22px 70px 20px
 			margin-bottom: 60px
 		+xsm
 			display: block
@@ -95,6 +88,7 @@
 		margin-left: -151px
 		+lg
 			margin-left: -61px
+			margin-bottom: 66px
 		+sm
 			margin-left: -50px
 	&__img
@@ -106,6 +100,8 @@
 	flex-wrap: wrap
 	max-width: 1405px
 	margin: 0 auto
+	+lg
+		justify-content: flex-start
 	&__item
 		position: relative
 		font-weight: normal
@@ -113,9 +109,21 @@
 		line-height: 29px
 		color: rgba(111, 111, 111, 0.75)
 		padding-top: 56px
+		+lg
+			margin-bottom: 20px
+			flex: 1 1 33.333%
+			max-width: 33.333%
+			padding-top: 0
+			padding-left: 35px
+		+md
+			flex: 1 1 50%
+			max-width: 50%
+			font-size: 18px
+			line-height: 22px
+			padding-left: 30px
 		&:not(:last-child)
 			+xl
-				margin-right: 20px
+				// margin-right: 20px
 
 		&:after
 			content: ''
@@ -126,3 +134,9 @@
 			height: 28px
 			background: rgba(202, 223, 248, 0.75)
 			border-radius: 5px
+			+lg
+				width: 23px
+				width: 23px
+			+md
+				height: 21px
+				height: 21px

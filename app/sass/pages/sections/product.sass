@@ -28,20 +28,33 @@
 			flex: 1 1 365px
 			max-width: 365px
 			padding-top: 200px
+			+xxl
+				flex: 1 1 33.333%
+				max-width: 33.333%
+				padding-top: 80px
 		&:nth-child(2)
 			flex: 1 1 430px
 			max-width: 430px
+			+xxl
+				flex: 1 1 33.333%
+				max-width: 33.333%
 		&:nth-child(3)
 			flex: 1 1 395px
 			max-width: 395px
 			padding-top: 57px
+			+xxl
+				flex: 1 1 33.333%
+				max-width: 33.333%
 
 	&__img
 		&-wrap
 			margin-left: -96px
+			+xxl
+				margin-left: 0
 
 	&__title
 		margin-bottom: 60px
+		
 
 
 	&__desc
@@ -63,6 +76,9 @@
 		line-height: 238px
 		color: #fff
 		text-align: center
+		+xxl
+			font-size: 200px
+			line-height: 170px
 
 	&__text
 		font-weight: bold
@@ -73,6 +89,8 @@
 		text-transform: uppercase
 		transform: translateX(50px)
 		margin-bottom: 18px
+		+xxl
+			font-size: 42px
 
 	&__info
 		font-size: 24px
@@ -81,3 +99,6 @@
 		color: #FFFFFF
 		margin-right: auto
 		padding-left: 49px
+		+xxl
+			font-size: 22px
+			line-height: 26px
