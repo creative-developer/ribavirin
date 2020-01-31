@@ -8,32 +8,37 @@
 	color: #fff
 	text-align: center
 	text-decoration: none
-	padding: 34.5px 77px
+	padding: 37.5px 77px 31.5px
 	border-radius: 50px
 	border: none
-	background: linear-gradient(270deg, #74B8F9 0%, #59ACF4 100%)
+	+gradient_x(#74B8F9, #59ACF4)
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 	outline: none
 	text-transform: uppercase
 	transition: all .3s ease
-	overflow: hidden
+	// overflow: hidden
 	z-index: 1
-	// &:after
-	// 	content: ''
-	// 	position: absolute
-	// 	top: 0
-	// 	left: 0
-	// 	width: 120%
-	// 	height: 100%
-	// 	border-radius: 50px
-	// 	transition: all .3s ease
-	// 	z-index: -1
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		border-radius: 50px
+		+gradient_x(#59ACF4, #74B8F9)
+		transition: all .3s ease
+		z-index: -1
 	&:focus:not(.disabled),
 	&:hover:not(.disabled)
 		outline: none
 		cursor: pointer
 		color: #fff
 		text-decoration: none
+		transform: translateY(-2px)
+		&::before
+			opacity: 1
 	&:active:not(.disabled)
 	&.disabled
 		opacity: .4
