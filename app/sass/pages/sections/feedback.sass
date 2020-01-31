@@ -77,8 +77,9 @@
 	padding: 61px 105px 88px 105px
 	width: 100%
 	max-width: 630px
+	+xxl
+		padding: 30px 60px 40px 60px
 	+lg
-		padding: 40px 80px 60px 80px
 	+md
 		box-shadow: none
 		background: transparent
@@ -96,6 +97,9 @@
 		line-height: 43px
 		color: #6F6F6F
 		margin-bottom: 43px
+		+xxl
+			margin-bottom: 10px
+			font-size: 32px
 		+lg
 			font-size: 28px
 			line-height: 34px
@@ -114,6 +118,12 @@
 		.input-wrap
 			+xxl
 				max-width: 100%
+				margin-bottom: 15px
+			input
+				+xxl
+					padding: 10px 20px 10px 50px
+					font-size: 20px
+					line-height: 20px
 
 			input
 				+md
@@ -131,6 +141,8 @@
 		margin-bottom: 32px
 		+xxl
 			width: 100%
+			padding: 26.5px 63.5px 20.5px
+
 		+lg
 			padding: 23.5px 63.5px 17.5px
 			font-size: 16px
