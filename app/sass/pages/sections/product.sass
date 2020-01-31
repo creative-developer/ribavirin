@@ -4,6 +4,20 @@
 	z-index: 1
 	background: #f7f7f7
 	// min-height: 1500px
+	+xxl
+		padding-top: 167px
+	+xl
+		padding-bottom: 180px
+	+lg
+		padding-top: 0
+		padding-bottom: 100px
+	+md
+		padding-bottom: 70px
+	+sm
+		padding-bottom: 40px
+	+xsm
+		padding-bottom: 20px
+
 	&:after
 		content: ''
 		position: absolute
@@ -16,44 +30,138 @@
 		background-size: 100% 100%
 		max-width: 1620px
 		z-index: -1
+		+xxl
+			// height: 800px
+			height: 1100px
+			top: -30px
+		+lg
+			height: 800px
+			transform: translateX(calc( -50% + 20px))
+		+md
+			height: 500px
+		+xsm
+			background: url('../img/bg/product-bg-mobile.svg') no-repeat center center
+			transform: translateX(-50%)
+			top: 0
 
 	&__row
 		justify-content: center
+		+xxl
+			padding-top: 50px
+		+xl
+			padding-top: 105px
+		+md
+			padding-top: 55px
+		+sm
+			padding-top: 135px
+		+xsm
+			padding-top: 160px
 
 	&__col
 		padding: 0 15px
 		display: flex
 		justify-content: center
+
 		&:nth-child(1)
 			flex: 1 1 365px
 			max-width: 365px
 			padding-top: 200px
 			+xxl
-				flex: 1 1 33.333%
-				max-width: 33.333%
+				flex: 1 1 30%
+				max-width: 30%
 				padding-top: 80px
+			+lg
+				order: 2
+				flex: 1 1 50%
+				max-width: 50%
+				justify-content: flex-start
+				padding-top: 120px
+			+xsm
+				flex: 1 1 40%
+				max-width: 40%
+
 		&:nth-child(2)
 			flex: 1 1 430px
 			max-width: 430px
 			+xxl
 				flex: 1 1 33.333%
 				max-width: 33.333%
+			+lg
+				order: 1
+				flex: 1 1 100%
+				max-width: 100%
+				padding-top: 20px
+			+md
+				padding-top: 0
+			+xsm
+				margin-bottom: 50px
+
 		&:nth-child(3)
 			flex: 1 1 395px
 			max-width: 395px
 			padding-top: 57px
 			+xxl
-				flex: 1 1 33.333%
-				max-width: 33.333%
+				flex: 1 1 36.666%
+				max-width: 36.666%
+			+lg
+				order: 3
+				flex: 1 1 50%
+				max-width: 50%
+				padding-top: 170px
+			+md
+				padding-top: 150px
+			+xsm
+				flex: 1 1 60%
+				max-width: 60%
+
+		&:nth-child(4)
+			display: none
+			+lg
+				display: block
+				flex: 1 1 100%
+				max-width: 100%
+				order: 4
+				margin-top: 35px
+			
 
 	&__img
 		&-wrap
 			margin-left: -96px
 			+xxl
-				margin-left: 0
+				margin-left: -110px
+				max-width: 100%
+			+xl
+				margin-left: -60px
+			+lg
+				max-width: 300px
+				height: 480px
+				display: flex
+				justify-content: center
+				align-items: center
+			+md
+				max-width: 200px
+				height: 300px
+			+sm
+				max-width: 160px
+				height: 180px
+
 
 	&__title
 		margin-bottom: 60px
+		+xxl
+			margin-bottom: 30px
+			font-size: 38px
+			line-height: 46px
+		+lg
+			font-size: 32px
+			line-height: 40px
+			color: #6F6F6F
+		+md
+			font-size: 28px
+			line-height: 32px
+		+sm
+			font-size: 24px
+			line-height: 36px
 		
 
 
@@ -62,14 +170,40 @@
 		font-size: 21px
 		line-height: 25px
 		color: #FFFFFF
+		+xxl
+			font-size: 19px
+		+lg
+			display: none
 		p
 			&:not(:last-child)
 				margin-bottom: 26px
+				+xxl
+					margin-bottom: 18px
+
+	&__mobile-desc
+		display: none
+		font-size: 19px
+		line-height: 25px
+		color: #6F6F6F
+		+lg
+			display: block
+		br
+			display: none
+
 
 .period
 	display: flex
 	flex-direction: column
 	align-items: center
+	+xxl
+		max-width: 100%
+		margin-right: -40px
+	+xl
+		margin-right: -90px
+	+lg
+		margin-right: 0
+		align-items: flex-start
+
 	&__number
 		font-weight: normal
 		font-size: 288px
@@ -79,6 +213,18 @@
 		+xxl
 			font-size: 200px
 			line-height: 170px
+		+lg
+			font-size: 150px
+			line-height: 140px
+			color: #77AEEA
+		+md
+			font-size: 100px
+			line-height: 90px
+		+sm
+			font-weight: normal
+			font-size: 96px
+			line-height: 115px
+
 
 	&__text
 		font-weight: bold
@@ -86,11 +232,25 @@
 		line-height: 58px
 		letter-spacing: 1.06em
 		color: #FFFFFF
-		text-transform: uppercase
 		transform: translateX(50px)
 		margin-bottom: 18px
+		+min_lg
+			text-transform: uppercase
 		+xxl
 			font-size: 42px
+			letter-spacing: .8em
+			transform: translateX(28px)
+		+lg
+			font-size: 32px
+			letter-spacing: .6em
+			color: #87A7CD
+			line-height: 40px
+			margin-bottom: 0
+			transform: translateX(15px)
+		+sm
+			font-size: 24px
+			line-height: 29px
+			letter-spacing: 0.415em
 
 	&__info
 		font-size: 24px
@@ -102,3 +262,11 @@
 		+xxl
 			font-size: 22px
 			line-height: 26px
+			padding-left: 28px
+		+lg
+			color: #87A7CD
+			font-size: 20px
+			padding-left: 13px
+		+sm
+			font-size: 14px
+			line-height: 17px
