@@ -72,6 +72,24 @@ $(window).scroll(function () {
 	fixHeader();
 });
 
+// Faq collapse
+function faqCollapse() {
+
+	$('.faq__item').click(function () {
+		let faqCurrentBtn = $(this);
+		let faqItem = $('.faq__item');
+		let faqCurrentItem = faqCurrentBtn.closest('.faq__item')
+		let faqDesc = faqCurrentItem.find('.faq__item-desc');
+
+		faqItem.not(faqCurrentItem).removeClass('show');
+		faqCurrentItem.toggleClass('show');
+		$('.faq').find('.faq__item-desc').not(faqDesc).hide(300);
+		faqDesc.slideToggle(300);
+
+	});
+};
+faqCollapse();
+
 // E-mail Ajax Send
 $('form').submit(function (e) {
 	e.preventDefault();

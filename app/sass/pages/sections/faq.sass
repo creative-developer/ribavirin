@@ -1,0 +1,113 @@
+.faq
+	padding: 2px 0
+	&__title
+		font-weight: normal
+		font-size: 48px
+		line-height: 58px
+		color: #6F6F6F
+		margin-bottom: 38px
+		
+	&__desc
+		font-weight: normal
+		font-size: 20px
+		line-height: 29px
+		color: rgba(111, 111, 111, 0.75)
+		p
+			margin-bottom: 0
+
+	&__row
+		justify-content: space-between
+
+	&__wrap
+		max-width: 380px
+		margin-left: 9px
+
+	&__bottom-wrap
+		position: relative
+		z-index: 1
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		margin-top: -7px
+		max-width: 371px
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 209px
+			max-width: 340px
+			background: #F1F6FA
+			border-radius: 10px
+			z-index: -1
+
+
+	&__feedback-icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 78px
+		height: 78px
+		border-radius: 50%
+		border: 0.5px solid #59ACF4
+		position: absolute
+		top: -3px
+		left: 60px
+		transform: translateY(50%)
+		&-wrap
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 56px
+			height: 56px
+			background: linear-gradient(75.96deg, #59B4FC 9.29%, #70BCF6 91.25%)
+			border-radius: 50%
+			.icon
+				width: 21px
+				height: 21px
+				fill: #fff
+
+	&__img-wrap
+
+	&__item
+		padding: 28px 56px 32px 43px
+		border-top: 0.5px solid rgba(111, 111, 111, 0.5)
+		border-bottom: 0.5px solid rgba(111, 111, 111, 0.5)
+		position: relative
+		cursor: pointer
+		user-select: none
+		&.show
+			&:before
+				
+		&:after
+			content: ''
+			position: absolute
+			top: 34.5px
+			left: 0
+			width: 24px
+			height: 2px
+			background: rgba(111, 111, 111, 0.25)
+		&:before
+			content: ''
+			position: absolute
+			top: 34.5px - 11px
+			width: 2px
+			height: 24px
+			background: rgba(111, 111, 111, 0.25)
+			left: 11px
+	&__item-title
+		font-weight: 600
+		font-size: 24px
+		line-height: 29px
+		color: #6F6F6F
+		margin-bottom: 22px !important
+	&__item-desc
+		font-weight: normal
+		font-size: 18px
+		line-height: 27px
+		color: rgba(111, 111, 111, 0.5)
+		display: none
+
+
+
