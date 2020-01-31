@@ -1,12 +1,32 @@
 .order
 	padding: 53px 0
 	+gradient_y(#fff, #cddded)
+	+lg
+		background: #ffffff
 
 	&__title
 		font-size: 64px
 		line-height: 77px
 		color: #6F6F6F
 		margin-bottom: 130px
+		+xxl
+			font-size: 50px
+			line-height: 60px
+			margin-bottom: 100px
+		+xl
+			font-size: 46px
+			line-height: 56px
+			margin-bottom: 80px
+		+lg
+			font-size: 41px
+			line-height: 51px
+			margin-bottom: 90px
+		+md
+			font-size: 36px
+			line-height: 44px
+		+sm
+			font-size: 32px
+			line-height: 38px
 		span
 			color: #72b7f9
 
@@ -17,6 +37,12 @@
 	+make-row()
 	padding: 112px 0 54px 137px
 	z-index: 1
+	+xxl
+		padding: 95px 0 40px 129px
+	+xl
+		padding: 95px 0 40px 120px
+	+lg
+		padding: 0
 	&::before,
 	&::after
 		content: ''
@@ -26,6 +52,8 @@
 		border-radius: 40px
 		background: #fff
 		z-index: -1
+		+lg
+			display: none
 	&::before
 		left: 15px
 		width: calc(19% - 15px)
@@ -47,37 +75,56 @@
 		background: rgba(#000, .2)
 		filter: blur(40px)
 		z-index: -2
+		+lg
+			display: none
 
 	&__col
 		+make-col-ready()
 		+make-col(6)
+		+lg
+			+make-col(12)
 		&:nth-child(1)
 			padding-top: 10px
 		&:nth-child(2)
 			padding-left: 25px
+			+lg
+				padding-left: 15px
 	
 	.input-wrap
 		margin-bottom: 83px
+		+xxl
+			margin-bottom: 70px
+		+lg
+			max-width: 100%
+			margin-bottom: 50px
 
 	&__qty
 		margin-bottom: 25px
+		+lg
+			+make-col(6)
+	&__price
+		+lg
+			+make-col(6)
 
 	&__btn
 		font-size: 24px
 		line-height: 29px
 		padding: 27px 44px 21px
+		+xxl
+			font-size: 20px
+			line-height: 25px
 
 
 	&__delivery
 		position: absolute
 		top: 11%
-		left: -150px
+		left: -140px
 		display: flex
 		align-items: center
 		flex-direction: column
 		justify-content: center
-		width: 287px
-		height: 287px
+		width: 280px
+		height: 280px
 		font-size: 24px
 		line-height: 29px
 		color: #6f6f6f
@@ -85,6 +132,20 @@
 		border-radius: 50%
 		background: #E9F0F7
 		box-shadow: 0px 20px 150px rgba(0, 0, 0, 0.07)
+		+xxl
+			left: -120px
+			width: 250px
+			height: 250px
+			font-size: 21px
+			line-height: 26px
+		+xl
+			left: -76px
+			width: 200px
+			height: 200px
+			font-size: 18px
+			line-height: 23px
+		+lg
+			display: none
 		span
 		strong
 			font-size: 64px
@@ -92,6 +153,14 @@
 			font-weight: 700
 			color: #59ACF4
 			margin: 10px 0
+			+xxl
+				font-size: 55px
+				line-height: 55px
+			+xl
+				font-size: 44px
+				line-height: 44px
+			+lg
+				display: none
 		span
 
 
@@ -108,7 +177,19 @@
 		border-radius: 50%
 		background: #E9F0F7
 		box-shadow: 0px 20px 150px rgba(0, 0, 0, 0.07)
+		+xxl
+			bottom: 11%
+			right: -50px
+			width: 140px
+			height: 140px
+		+xl
+			bottom: 8%
+			right: -40px
+			width: 120px
+			height: 120px
 		img
+			+xxl
+				width: 100px
 
 
 
@@ -120,6 +201,9 @@
 		font-weight: 600
 		color: rgba(111, 111, 111, 0.75)
 		margin-bottom: 8px
+		+xxl
+			font-size: 24px
+			line-height: 30px
 
 	&__wrap
 		display: flex
@@ -160,6 +244,10 @@
 		border-radius: 10px
 		background: rgba(#59ACF4, .1)
 		border: none
+		+xxl
+			width: 90px
+			font-size: 42px
+			line-height: 42px
 
 
 
@@ -173,9 +261,15 @@
 		font-weight: 600
 		color: rgba(111, 111, 111, 0.75)
 		margin-bottom: 7px
+		+xxl
+			font-size: 24px
+			line-height: 30px
 	
 	&__amount
 		font-size: 64px
 		line-height: 77px
 		color: #454545
 		margin-bottom: 47px
+		+xxl
+			font-size: 53px
+			line-height: 66px

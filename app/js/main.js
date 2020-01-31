@@ -229,6 +229,11 @@ function priceCalc() {
 	priceEl.children('.val').html(calcPrice.toFixed(2));
 }
 
+if (MQ.isMD) {
+	$('.use__capsule-img img').attr('src', $('.use__capsule-img img').attr('src').replace('img/use/capsule.png','img/use/capsule_sm.png'))
+	$('.use__capsule-img img').attr('src', $('.use__capsule-img img').attr('src').replace('img/use/capsule2.png','img/use/capsule2_sm.png'))
+}
+
 ////////// Ready Functions
 $(document).ready(function () {
 	//
