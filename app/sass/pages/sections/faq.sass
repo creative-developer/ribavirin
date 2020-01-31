@@ -1,5 +1,5 @@
 .faq
-	padding: 2px 0
+	padding: 2px 0 107px
 	&__title
 		font-weight: normal
 		font-size: 48px
@@ -79,7 +79,7 @@
 		user-select: none
 		&.show
 			&:before
-				
+				transform: rotate(90deg)
 		&:after
 			content: ''
 			position: absolute
@@ -88,6 +88,7 @@
 			width: 24px
 			height: 2px
 			background: rgba(111, 111, 111, 0.25)
+			transition: all 0.3s ease
 		&:before
 			content: ''
 			position: absolute
@@ -96,6 +97,7 @@
 			height: 24px
 			background: rgba(111, 111, 111, 0.25)
 			left: 11px
+			transition: all 0.3s ease
 	&__item-title
 		font-weight: 600
 		font-size: 24px

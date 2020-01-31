@@ -72,6 +72,19 @@ $(window).scroll(function () {
 	fixHeader();
 });
 
+// Smooth scroll
+$('.menu__link').click(function (event) {
+	event.preventDefault();
+	let el = $(this).attr('href');
+	let headerTopOffset = 70;
+
+	$('body, html').animate({
+		scrollTop: $(el).offset().top - headerTopOffset
+	}, 700);
+
+	return false;
+});
+
 // Faq collapse
 function faqCollapse() {
 
@@ -145,7 +158,7 @@ $('form').submit(function (e) {
 });
 
 // tabs toggle
-$('.tabs__link').click(function(e) {
+$('.tabs__link').click(function (e) {
 	e.preventDefault();
 
 	let tabs = $(this).closest('.tabs');
@@ -161,13 +174,13 @@ $('.tabs__link').click(function(e) {
 	// Toggle content
 	contents.removeClass('tab__content--active tab__content--fade_in');
 	tabs.find(tabID).addClass('tab__content--active');
-	setTimeout(function() {
+	setTimeout(function () {
 		tabs.find(tabID).addClass('tab__content--fade_in');
 	}, 10);
 
 	// Toggle capsule
 	capsule.removeClass('active');
-	
+
 	if (tabID === '#tab1') {
 		capsule.eq(0).addClass('active');
 	} else {
