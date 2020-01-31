@@ -1,11 +1,143 @@
 .use
 	position: relative
-	padding: 649px 0 100px
-	background: url(../img/use/bg.png) no-repeat top center, #fcfcfc
-	background-size: 100% 649px
-	margin-top: -649px
+	padding: 162px 0 100px
 	border-bottom: 1px solid #000
 	z-index: 2
+	&__bg
+		position: absolute
+		top: -580px
+		left: 0
+		width: 1920px
+		height: 649px
+		overflow: hidden
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 1920px
+			height: 649px
+			background: url(../img/use/bg.png) no-repeat top center
+			background-size: 100% 100%
 
 	&__title
 		color: #6F6F6F
+		margin-bottom: 50px
+	
+	&__desc
+		max-width: 577px
+		font-size: 24px
+		line-height: 33px
+		color: #6F6F6F
+		margin-bottom: 92px
+
+	&__capsule
+		position: relative
+		margin: -64px 0 64px 7px
+		img
+
+	&__tabs
+		max-width: 439px
+		float: right
+
+
+
+
+
+
+
+.use-item
+	position: absolute
+	display: flex
+	&__number
+		font-size: 144px
+		line-height: 144px
+		color: #59ACF4
+		font-weight: 300
+	&__content
+	&__title
+		font-size: 24px
+		line-height: 29px
+		font-weight: 600
+		color: #6F6F6F
+		margin-top: 5px
+		margin-bottom: 17px
+	&__desc
+		font-size: 18px
+		line-height: 22px
+		color: rgba(111, 111, 111, 0.75)
+	
+
+	&:nth-child(1)
+		top: 26px
+		right: 12px
+		align-items: center
+		.use-item__number
+			margin-right: 15px
+
+	&:nth-child(2)
+		bottom: -118px
+		left: -70px
+		flex-direction: column
+		.use-item
+			&__number
+				margin-bottom: 6px
+			&__content
+				padding-left: 21px
+
+
+
+
+
+
+// tabs
+.tabs
+	&__control
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			bottom: 3px
+			left: 0
+			width: 100%
+			height: 1px
+			background: rgba(111, 111, 111, 0.25)
+	&__list
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__item
+	&__link
+		position: relative
+		display: block
+		color: $c1
+		font-size: 24px
+		line-height: 29px
+		font-weight: 700
+		text-transform: uppercase
+		color: rgba(111, 111, 111, 0.25)
+		padding-bottom: 31px
+		text-align: center
+		border-bottom: 3px solid transparent
+		&:hover,
+		&--active
+			color: rgba(111, 111, 111, 0.75)
+			border-color: #9BD1FF
+
+	&__container
+		position: relative
+		padding-top: 23px
+	
+	.tab
+		&__content
+			display: none
+			opacity: 0
+			font-size: 18px
+			line-height: 22px
+			transition: all .4s ease
+			&--active
+				display: block
+			&--fade_in
+				opacity: 1
+		&__table
+			width: 100%
