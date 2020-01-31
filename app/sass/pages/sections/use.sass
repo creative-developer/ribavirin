@@ -1,7 +1,6 @@
 .use
 	position: relative
-	padding: 162px 0 100px
-	border-bottom: 1px solid #000
+	padding: 162px 0 0
 	z-index: 2
 	&__bg
 		position: absolute
@@ -34,7 +33,25 @@
 	&__capsule
 		position: relative
 		margin: -64px 0 64px 7px
-		img
+	
+		&-img
+			position: relative
+			width: 589px
+			height: 517px
+			z-index: -1
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				transition: all .8s ease
+				opacity: 0
+				visibility: hidden
+				&:nth-child(1)
+				&:nth-child(2)
+				&.active
+					opacity: 1
+					visibility: visible
 
 	&__tabs
 		max-width: 439px
@@ -135,7 +152,7 @@
 			font-size: 18px
 			line-height: 22px
 			color: #6F6F6F
-			transition: all .4s ease
+			transition: all .8s ease
 			&--active
 				display: block
 			&--fade_in

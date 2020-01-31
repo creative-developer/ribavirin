@@ -129,11 +129,12 @@ $('form').submit(function (e) {
 // tabs toggle
 $('.tabs__link').click(function(e) {
 	e.preventDefault();
-	
+
 	let tabs = $(this).closest('.tabs');
 	let btns = tabs.find('.tabs__link');
 	let contents = tabs.find('.tab__content');
 	let tabID = $(this).attr('href');
+	let capsule = $('.use__capsule-img img');
 
 	// Toggle btn
 	btns.removeClass('tabs__link--active');
@@ -145,6 +146,15 @@ $('.tabs__link').click(function(e) {
 	setTimeout(function() {
 		tabs.find(tabID).addClass('tab__content--fade_in');
 	}, 10);
+
+	// Toggle capsule
+	capsule.removeClass('active');
+	
+	if (tabID === '#tab1') {
+		capsule.eq(0).addClass('active');
+	} else {
+		capsule.eq(1).addClass('active');
+	}
 });
 
 ////////// Ready Functions
