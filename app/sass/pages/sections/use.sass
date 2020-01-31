@@ -106,13 +106,35 @@
 			margin: -30px 0 80px 7px
 		+lg
 			max-width: 455px
-			margin: 40px auto 260px
+			margin: 40px auto 250px
 		+md
 			max-width: 350px
 			transform: translateX(30px)
 		+sm
 			max-width: 312px
+			margin: 40px auto 230px
 			transform: translateX(13px)
+		
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			right: 15%
+			width: 229px
+			height: 229px
+			border-radius: 50%
+			background: rgba(63, 140, 224, 0.15)
+			filter: blur(60px)
+			+xl
+				right: 18%
+				bottom: -30px
+				width: 210px
+				height: 210px
+			+lg
+				right: 21%
+				bottom: -30px
+				width: 190px
+				height: 190px
 	
 		&-img
 			position: relative
