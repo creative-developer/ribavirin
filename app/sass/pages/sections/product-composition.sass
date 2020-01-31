@@ -7,8 +7,6 @@
 		padding: 65px 0 274px
 	+xl
 		padding: 65px 0 230px
-	+lg
-		padding: 65px 0 150px
 	+md
 		padding: 65px 0 115px
 	
@@ -19,6 +17,8 @@
 			margin-bottom: 100px
 		+xl
 			margin-bottom: 80px
+		+md
+			margin-bottom: 60px
 	
 	&__illustration
 		position: relative
@@ -117,6 +117,10 @@
 		padding-left: 74px
 		+lg
 			padding-left: 0
+		+md
+			max-width: 450px
+			margin: 0 auto
+
 		&-col
 			&:nth-child(1)
 				font-size: 144px
@@ -157,6 +161,15 @@
 					margin-bottom: 3px
 
 
+
+
+
+
+
+
+
+
+
 .composition-item
 	display: flex
 	align-items: center
@@ -190,6 +203,11 @@
 		+lg
 			margin-right: 0
 			margin-bottom: 20px
+		+sm
+			min-width: 50px
+			width: 50px
+			height: 50px
+			margin-bottom: 15px
 		.icon
 			width: 36px
 			height: 36px
@@ -200,11 +218,14 @@
 			+xl
 				width: 28px
 				height: 28px
+			+sm
+				height: 26px
+				width: 26px
 	&__desc
 		font-size: 24px
 		line-height: 29px
 		color: #ffffff
-		margin-top: 6px
+		margin-top: 3px
 		+xxl
 			font-size: 20px
 			line-height: 25px
@@ -213,10 +234,18 @@
 			font-size: 18px
 			line-height: 20px
 			margin-top: 0
-		+sm
+		+lg
 			max-width: 210px
+			font-size: 16px
+			line-height: 18px
+			margin-top: 0
+		+md
 			font-size: 14px
 			line-height: 16px
+		+sm
+			max-width: 210px
+			font-size: 12px
+			line-height: 14px
 			margin-top: 0
 
 
@@ -233,6 +262,10 @@
 				right: -374px
 			.composition-item__icon
 				background: #73b8ef
+				+xxl
+					background: #82c4f8
+				+xl
+					background: #74b9f2
 
 		&:nth-child(2)
 			top: 567px
@@ -245,6 +278,10 @@
 				right: -341px
 			.composition-item__icon
 				background: #387fb7
+				+xxl
+					background: #4c95d2
+				+xl
+					background: #559dd7
 
 		&:nth-child(3)
 			top: 335px
@@ -257,6 +294,10 @@
 				left: -220px
 			.composition-item__icon
 				background: #73b5e9
+				+xxl
+					background: #83bdeb
+				+xl
+					background: #89bfee
 			.composition-item__desc
 				order: -1
 				margin-right: 26px

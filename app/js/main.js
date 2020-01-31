@@ -232,7 +232,12 @@ $('.qty__plus').click(function (e) {
 	e.preventDefault();
 	const input = $(this).siblings('input');
 	
-	input.val(parseInt(input.val()) + 1)
+	
+	if (parseInt(input.val()) >= 1) {
+		input.val(parseInt(input.val()) + 1)
+	} else {
+		input.val(1)
+	}
 
 	priceCalc();
 });

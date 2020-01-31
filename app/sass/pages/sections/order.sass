@@ -25,9 +25,12 @@
 			font-size: 36px
 			line-height: 44px
 			margin-bottom: 60px
+			br
+				display: none
 		+sm
 			font-size: 32px
 			line-height: 38px
+			margin-bottom: 30px
 		span
 			color: #72b7f9
 
@@ -39,9 +42,9 @@
 	padding: 112px 0 54px 137px
 	z-index: 1
 	+xxl
-		padding: 95px 0 40px 129px
+		padding: 95px 0 20px 129px
 	+xl
-		padding: 95px 0 40px 120px
+		padding: 95px 0 20px 120px
 	+lg
 		padding: 0
 	&::before,
@@ -98,8 +101,6 @@
 	
 	.input-wrap
 		margin-bottom: 83px
-		+xxl
-			margin-bottom: 70px
 		+lg
 			max-width: 100%
 			margin-bottom: 50px
@@ -117,11 +118,24 @@
 
 	&__btn
 		font-size: 24px
-		line-height: 29px
-		padding: 27px 44px 21px
+		line-height: 24px
+		padding: 30px 49px 24px
 		+xxl
 			font-size: 20px
-			line-height: 25px
+			line-height: 20px
+			padding: 32px 52px 26px
+		+xl
+			font-size: 18px
+			line-height: 18px
+			padding: 28px 45px 23px
+		+lg
+			font-size: 16px
+			line-height: 16px
+			padding: 29px 60px 24px
+		+sm
+			font-size: 15px
+			line-height: 15px
+			padding: 26px 50px 22px
 
 
 	&__delivery
@@ -202,6 +216,29 @@
 			+xxl
 				width: 100px
 
+	&__logo2
+		position: absolute
+		top: 51px
+		right: 68px
+		width: 183px
+		height: 183px
+		opacity: 0.25
+		+xxl
+			top: 33px
+			right: 47px
+			width: 130px
+			height: 130px
+		+xl
+			top: 25px
+			right: 39px
+			width: 110px
+			height: 110px
+		+lg
+			display: none
+		.icon
+			width: 100%
+			height: 100%
+			fill: #5BADF5
 
 
 
@@ -218,6 +255,7 @@
 		+lg
 			font-size: 22px
 			line-height: 28px
+			margin-bottom: 14px
 		+sm
 			font-size: 18px
 			line-height: 24px
@@ -262,14 +300,21 @@
 		background: rgba(#59ACF4, .1)
 		border: none
 		+xxl
-			width: 90px
-			font-size: 42px
-			line-height: 42px
+			width: 77px
+			font-size: 40px
+			line-height: 40px
+			padding: 13px 8px 9px
 		+lg
 			width: 62px
 			font-size: 36px
 			line-height: 36px
 			padding: 7px 5px 3px
+			margin: 0 12px
+		+md
+			width: 62px
+			font-size: 32px
+			line-height: 32px
+			padding: 12px 5px 8px
 			margin: 0 12px
 
 
@@ -290,6 +335,7 @@
 		+lg
 			font-size: 22px
 			line-height: 28px
+			margin-bottom: 18px
 		+sm
 			font-size: 18px
 			line-height: 24px
