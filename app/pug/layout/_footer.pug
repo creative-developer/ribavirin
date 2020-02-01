@@ -4,7 +4,7 @@ footer.b-footer
 			.col-12.col-lg-3
 				a._logo-wrap(href="#")
 					img._logo(src="img/logo/footer-logo.svg", alt="")
-			.col-12.col-lg-9
+			.col-12.col-lg-9._right-col
 				nav.b-menu
 					ul._list
 						li._item
@@ -17,6 +17,8 @@ footer.b-footer
 							a._link(href="#use") Форма выпуска
 						li._item
 							a._link(href="#order") Купить
+				a(href="https://showstreams.tv/")
+					img(src="https://www.free-kassa.ru/img/fk_btn/18.png", title="Бесплатный видеохостинг", alt="")
 
 
 |
@@ -28,9 +30,9 @@ footer.b-footer
 		h3._title Получите <span>бесплатную<br> консультацию</span> <br>специалиста
 		._wrap
 			._fields-wrap
-				+input('text', 'name', 'name', 'Имя', 'person', true)
-				+input('email', 'email', 'email', 'Почта', 'email', true)
-				+input('text', 'question', 'question', 'Задайте вопрос', 'question', true)
+				+input('text', 'name', 'Имя', 'Имя', 'person', true)
+				+input('email', 'email', 'Почта', 'Почта', 'email', true)
+				+input('text', 'question', 'Вопрос', 'Задайте вопрос', 'question', true)
 			button._btn.btn(type="submit") Получить консультацию
 			._text
 				p Нажмая на конопку, Вы даёте согласие на <br>обработку песональных данных
@@ -48,8 +50,10 @@ footer.b-footer
 .b-mfp.-succes-popup.zoom-anim-dialog.mfp-hide#success
 	.b-form-result.-success
 		.b-mess
-			._title Success!
-			._desc We will contact with you soon
+			._title Спасибо!<br> Заявка отправлена
+			._desc Наш специалист перезвонит вам<br> в ближайшее время, что бы<br> ответить на вопросы
+			._img-wrap
+				img._img(src="img/other/small-capsule.png", alt="")
 
 |
 |
