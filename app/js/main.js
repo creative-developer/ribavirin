@@ -169,35 +169,31 @@ $('form:not(#ya-form)').submit(function (e) {
 		}
 	});
 
-	// $.ajax({
-	// 	type: 'POST',
-	// 	url: 'mail/mail.php',
-	// 	dataType: 'json',
-	// 	data: formData,
-	// }).done(function (data) {
-	// 	if (data.status === 'success') {
-	// 		if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-	// 			form.find('.form-result').addClass('form-result--success');
-	// 		} else {
-	// 			mfpPopup('#success');
-	// 		}
+	$.ajax({
+		type: 'POST',
+		url: 'mail/mail.php',
+		dataType: 'json',
+		data: formData,
+	}).done(function (data) {
+		if (data.status === 'success') {
+			if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
+				form.find('.form-result').addClass('form-result--success');
+			} else {
+				mfpPopup('#success');
+			}
 
-	// 		setTimeout(function () {
-	// 			if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-	// 				form.find('.form-result').removeClass('form-result--success');
-	// 			}
-	// 			$.magnificPopup.close();
-	// 			form.trigger('reset');
-	// 		}, 3000);
-	// 	} else {
-	// 		alert('Ajax result: ' + data.status);
-	// 	}
-	// });
-
-	console.log('send');
+			setTimeout(function () {
+				if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
+					form.find('.form-result').removeClass('form-result--success');
+				}
+				$.magnificPopup.close();
+				form.trigger('reset');
+			}, 3000);
+		} else {
+			alert('Ajax result: ' + data.status);
+		}
+	});
 	
-
-
 	return false;
 });
 
