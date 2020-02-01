@@ -111,28 +111,28 @@ function faqCollapse() {
 };
 faqCollapse();
 
-let articleList = $('.mobile-carousel');
+let articleList = $('.where-buy-mobile');
 let owlSettings = {
 	loop: true,
-	items: 3,
+	items: 1,
 	margin: 0,
 	nav: false,
 	dots: true
 }
 
-// function articleSlider(){
-// 	if ($('body').width() <= 576 ) {
-// 		initOwl();
-// 	} else {
-// 		reInitOwl();
-// 	}
-// }
+function articleSlider(){
+	if ($('body').width() <= 576 ) {
+		initOwl();
+	} else {
+		reInitOwl();
+	}
+}
 
-// articleSlider();
+articleSlider();
 
-// $(window).on('resize', function () {
-// 	articleSlider();
-// });
+$(window).on('resize', function () {
+	articleSlider();
+});
 
 function initOwl() {
 	articleList.owlCarousel(owlSettings).addClass('owl-carousel').trigger('refresh.owl.carousel');
