@@ -64,6 +64,7 @@
 		justify-content: center
 		+xxl
 			padding-top: 50px
+			align-items: center
 		+xl
 			// padding-top: 105px
 			padding-top: 85px
@@ -87,7 +88,8 @@
 			+xxl
 				flex: 1 1 30%
 				max-width: 30%
-				padding-top: 80px
+				// padding-top: 80px
+				padding-top: 0
 			+lg
 				order: 2
 				flex: 1 1 50%
@@ -105,6 +107,7 @@
 			+xxl
 				flex: 1 1 33.333%
 				max-width: 33.333%
+				padding-top: 0
 			+lg
 				order: 1
 				flex: 1 1 100%
@@ -122,6 +125,7 @@
 			+xxl
 				flex: 1 1 36.666%
 				max-width: 36.666%
+				padding-top: 0
 			+lg
 				order: 3
 				flex: 1 1 50%
@@ -183,7 +187,16 @@
 		+sm
 			font-size: 24px
 			line-height: 36px
-		
+		&-wrap
+			+xxl
+				margin-left: -40px
+				margin-right: 40px
+			+xl
+				margin-right: 20px
+				margin-left: -20px
+			+lg
+				margin-right: 0
+				margin-left: 0
 
 
 	&__desc
@@ -218,9 +231,7 @@
 	align-items: center
 	+xxl
 		max-width: 100%
-		margin-right: -40px
-	+xl
-		margin-right: -90px
+		margin-right: -80px
 	+lg
 		margin-right: 0
 		align-items: flex-start

@@ -114,6 +114,7 @@ let owlSettings = {
 	nav: false,
 	dots: true
 }
+
 // function articleSlider(){
 // 	if ($('body').width() <= 576 ) {
 // 		initOwl();
@@ -225,6 +226,14 @@ $('.tabs__link').click(function (e) {
 		capsule.eq(1).addClass('active');
 	}
 });
+
+
+// init
+var instance = $.fn.deviceDetector;
+if (instance.isMacos()) {
+	$('html').addClass('mac-os')
+}
+console.log(instance.getInfo());
 
 // QTY change
 // increment

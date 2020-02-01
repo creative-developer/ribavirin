@@ -9,8 +9,9 @@
 	+lg
 		padding: 20px 0 80px
 	+md
-		min-height: 1172px
-
+		// min-height: 1250px
+		min-height: 100%
+	
 	&:after
 		content: ''
 		position: absolute
@@ -35,17 +36,19 @@
 			right: auto
 			left: 50%
 			transform: translateX(-50%)
-			width: 100%
-			max-width: 600px
+			width: 600px
 			height: 980px
 			object-fit: cover
 		+lg
-			max-width: 450px
-			height: 800px
+			width: 460px
+			height: 712px
 		+md
-			max-width: 440px
-			height: 700px
+			width: 440px
+			height: 681px
 		+sm
+			width: 360px
+			height: 557px
+
 
 
 
@@ -64,6 +67,8 @@
 			padding-left: 15px
 		+md
 			margin-bottom: 500px
+		+sm
+			margin-bottom: 440px
 	&__row
 		+xxl
 			justify-content: center
@@ -80,8 +85,10 @@
 	width: 100%
 	max-width: 630px
 	+xxl
-		padding: 30px 50px 40px 50px
+		// padding: 30px 50px 40px 50px
+		padding: 50px 60px 50px 60px
 		max-width: 430px
+		border-radius: 20px
 	+lg
 		padding: 30px 30px 40px 30px
 		max-width: 390px
@@ -104,8 +111,9 @@
 		color: #6F6F6F
 		margin-bottom: 43px
 		+xxl
-			margin-bottom: 10px
-			font-size: 27px
+			margin-bottom: 20px
+			font-size: 24px
+			line-height: 33px
 		+lg
 			font-size: 28px
 			line-height: 34px
@@ -120,14 +128,15 @@
 		margin-bottom: 9px
 		+xxl
 			width: 100%
+			margin-bottom: 10px
 
 		.input-wrap
 			+xxl
 				max-width: 100%
-				margin-bottom: 15px
+				margin-bottom: 20px
 			input
 				+xxl
-					padding: 10px 20px 10px 50px
+					padding: 15px 20px 15px 40px
 					font-size: 20px
 					line-height: 20px
 
@@ -136,6 +145,9 @@
 					background: transparent
 
 		.input-icon
+			+xxl
+				width: 25px
+				height: 25px
 
 		.icon
 
@@ -147,10 +159,9 @@
 		margin-bottom: 32px
 		+xxl
 			width: 100%
-			padding: 20.5px 50px 14.5px
+			padding: 20.5px 40px 14.5px
 			font-size: 16px
 		+lg
-			// padding: 23.5px 63.5px 17.5px
 			font-size: 16px
 		+sm
 			font-size: 12px
@@ -193,7 +204,7 @@
 		bottom: -80px
 	+sm
 		bottom: auto
-		top: -50px
+		top: -140px
 
 	&__item
 		background: #FFFFFF

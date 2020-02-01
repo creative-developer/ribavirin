@@ -28,6 +28,7 @@ function jsLibs() {
 		'app/libs/owl.carousel/dist/owl.carousel.min.js',
 		// 'app/libs/fancybox/dist/jquery.fancybox.min.js',
 		'app/libs/inputmask/dist/min/jquery.inputmask.bundle.min.js',
+		'app/libs/js.device.detector-master/dist/jquery.device.detector.min.js',
 	])
 		.pipe(concat('libs.min.js'))
 		.pipe(uglify())
