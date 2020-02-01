@@ -1,3 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{SERVER_PORT} !^443$ 
+RewriteRule ^(.*)$ https://ribavirin.shop/$1 [R=301,L]
+
 <ifModule mod_expires.c>
 
 # Add correct content-type for fonts
