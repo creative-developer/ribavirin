@@ -31,7 +31,7 @@ function jsLibs() {
 		'app/libs/js.device.detector-master/dist/jquery.device.detector.min.js',
 	])
 		.pipe(concat('libs.min.js'))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(dest('app/js'))
 		.pipe(browsersync.stream());
 }

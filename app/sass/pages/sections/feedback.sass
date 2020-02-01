@@ -22,6 +22,11 @@
 		height: 610px
 		background: url('../img/bg/feedback-bottom.svg') no-repeat center center/cover
 		z-index: 0
+		+xsm
+			background: url('../img/bg/feedback-bottom-mobile.svg') no-repeat center center/cover
+			width: 426px
+			height: 224px
+
 	&:before
 		content: ''
 		position: absolute
@@ -63,12 +68,13 @@
 			display: flex
 			justify-content: center
 		+lg
-			margin-bottom: 750px
+			margin-bottom: 670px
 			padding-left: 15px
 		+md
-			margin-bottom: 500px
+			margin-bottom: 560px
 		+sm
 			margin-bottom: 440px
+
 	&__row
 		+xxl
 			justify-content: center
@@ -175,6 +181,10 @@
 		margin: 0 auto
 		+xxl
 			font-size: 14px
+		+sm
+			font-size: 10px
+			line-height: 12px
+			text-align: center
 		p
 			margin-bottom: 0
 
@@ -185,7 +195,7 @@
 	display: flex
 	justify-content: space-between
 	align-items: flex-start
-	width: 100%
+	width: calc( 100% -  30px)
 	height: 347px
 	max-width: 1420px
 	transform: translateX(calc( -50% + 7px ))
@@ -201,10 +211,12 @@
 	+lg
 		bottom: -10px
 	+md
-		bottom: -80px
+		bottom: -10px
 	+sm
 		bottom: auto
-		top: -140px
+		top: -120px
+	+xsm
+		top: 20px
 
 	&__item
 		background: #FFFFFF
@@ -220,9 +232,27 @@
 			+lg
 				margin-top: 0
 				margin-left: 0
+
 			.advantages-card
 				&__wrap
 					padding: 16.5px 49px 16.5px 71px
+					+lg
+						padding: 16.5px 71px 16.5px 71px
+					+xsm
+						padding: 16.5px 70px 16.5px 25px
+					&:after
+						+xsm
+							left: auto
+							right: 29px
+					&:before
+						+xsm
+							left: auto
+							right: 15px
+				&__text
+					+xsm
+						text-align: right
+
+
 		&:nth-child(3)
 			align-self: flex-end
 			+lg
