@@ -85,6 +85,11 @@ $('.js-scroll, .menu__link').click(function(event) {
 		700
 	);
 
+	if (MQ.isLG) {
+		$('.js-menu').removeClass('is-active');
+		$('.menu').removeClass('opened');
+	}
+
 	return false;
 });
 
@@ -231,9 +236,8 @@ $('.tabs__link').click(function (e) {
 // init
 var instance = $.fn.deviceDetector;
 if (instance.isMacos()) {
-	$('html').addClass('mac-os')
+	$('html').addClass('mac-os');
 }
-console.log(instance.getInfo());
 
 // QTY change
 // increment
@@ -263,7 +267,6 @@ $('.qty__minus').click(function (e) {
 
 	priceCalc();
 });
-
 
 function priceCalc() {
 	const priceEl = $('.price__amount');

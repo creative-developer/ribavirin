@@ -266,15 +266,39 @@
 	&__wrap
 		display: flex
 		align-items: center
+	
+	&__test
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 24px !important
+		height: 24px !important
+		min-height: 24px !important
+		border-radius: 50%
+		background: #74B8F9
+		border: none
+		cursor: pointer
+		transition: all .4s ease
+		user-select: none
+		&:focus
+			outline: none
+		&:hover
+			background: darken(#74B8F9, 9%)
+		
+		.icon
+			fill: #ffffff
+			min-width: 8px
+			width: 8px
+			height: 5px
+
 	&__minus,
 	&__plus
 		display: flex
 		align-items: center
 		justify-content: center
-		width: 24px
-		height: 24px
-		min-width: 24px
-		min-height: 24px
+		width: 24px !important
+		height: 24px !important
+		min-height: 24px !important
 		border-radius: 50%
 		background: #74B8F9
 		border: none
@@ -291,18 +315,15 @@
 
 	&__minus
 		.icon
+			min-width: 8px
 			width: 8px
 			height: 5px
-			min-width: 8px
-			min-height: 5px
-			
 
 	&__plus
 		.icon
-			width: 14px
-			height: 14px
-			min-width: 14px
-			min-height: 14px
+			min-width: 12px
+			width: 12px
+			height: 12px
 	
 	input
 		width: 99px
@@ -313,9 +334,10 @@
 		text-align: center
 		padding: 7px 13px 3px
 		margin: 0 23px
-		border-radius: 10px
+		border-radius: 10px !important
 		background: rgba(#59ACF4, .1)
 		border: none
+		appearance: none
 		+xxl
 			width: 77px
 			font-size: 40px
