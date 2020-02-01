@@ -1,9 +1,11 @@
 .order
-	padding: 53px 0 175px
+	padding: 41px 0 175px
 	+gradient_y(#fff, #cddded)
 	+lg
 		background: #ffffff
-		padding: 53px 0 50px
+		padding: 41px 0 50px
+	+sm
+		padding: 49px 0 50px
 
 	&__title
 		font-size: 64px
@@ -29,9 +31,9 @@
 			br
 				display: none
 		+sm
-			font-size: 32px
-			line-height: 38px
-			margin-bottom: 30px
+			font-size: 24px
+			line-height: 30px
+			margin-bottom: 47px
 		span
 			color: #72b7f9
 
@@ -92,6 +94,8 @@
 			padding-top: 10px
 			+lg
 				padding-bottom: 10px
+			+sm
+				padding-bottom: 31px
 		&:nth-child(2)
 			padding-left: 25px
 			+lg
@@ -107,17 +111,24 @@
 		+lg
 			max-width: 100%
 			margin-bottom: 50px
+		+sm
+			margin-bottom: 16px
 
 	&__qty
 		margin-bottom: 25px
 		+lg
 			+make-col(6)
 			margin-bottom: 62px
+		+sm
+			margin-bottom: 33px
 
 	&__price
+		margin-bottom: 47px
 		+lg
 			text-align: right
 			+make-col(6)
+		+sm
+			margin-bottom: 33px
 
 	&__btn
 		font-size: 24px
@@ -134,11 +145,11 @@
 		+lg
 			font-size: 16px
 			line-height: 16px
-			padding: 29px 60px 24px
+			padding: 29px 68px 24px
 		+sm
-			font-size: 15px
-			line-height: 15px
-			padding: 26px 50px 22px
+			font-size: 14px
+			line-height: 14px
+			padding: 26px 68px 22px
 
 
 	&__delivery
@@ -262,34 +273,11 @@
 		+sm
 			font-size: 18px
 			line-height: 24px
+			margin-bottom: 13px
 
 	&__wrap
 		display: flex
 		align-items: center
-	
-	&__test
-		display: flex
-		align-items: center
-		justify-content: center
-		width: 24px !important
-		height: 24px !important
-		min-height: 24px !important
-		border-radius: 50%
-		background: #74B8F9
-		border: none
-		cursor: pointer
-		transition: all .4s ease
-		user-select: none
-		&:focus
-			outline: none
-		&:hover
-			background: darken(#74B8F9, 9%)
-		
-		.icon
-			fill: #ffffff
-			min-width: 8px
-			width: 8px
-			height: 5px
 
 	&__minus,
 	&__plus
@@ -392,7 +380,6 @@
 		font-size: 64px
 		line-height: 77px
 		color: #454545
-		margin-bottom: 47px
 		+xxl
 			font-size: 53px
 			line-height: 66px

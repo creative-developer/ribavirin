@@ -277,8 +277,8 @@ function priceCalc() {
 }
 
 if (MQ.isMD) {
-	$('.use__capsule-img img').attr('src', $('.use__capsule-img img').attr('src').replace('img/use/capsule.png','img/use/capsule_sm.png'))
-	$('.use__capsule-img img').attr('src', $('.use__capsule-img img').attr('src').replace('img/use/capsule2.png','img/use/capsule2_sm.png'))
+	$('.use__capsule-img img').eq(0).attr('src', 'img/use/capsule_sm.png');
+	$('.use__capsule-img img').eq(1).attr('src', 'img/use/capsule2_sm.png');
 }
 
 ////////// Ready Functions
