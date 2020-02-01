@@ -8,6 +8,8 @@
 		padding: 60px 0 80px
 	+lg
 		padding: 0 0 80px
+	+md
+		min-height: 1172px
 
 	&:after
 		content: ''
@@ -78,13 +80,17 @@
 	width: 100%
 	max-width: 630px
 	+xxl
-		padding: 30px 60px 40px 60px
+		padding: 30px 50px 40px 50px
+		max-width: 430px
 	+lg
+		padding: 30px 30px 40px 30px
+		max-width: 390px
 	+md
 		box-shadow: none
 		background: transparent
 		border-radius: 0
 		padding: 0 0px 60px 0px
+		max-width: 100%
 	+sm
 		// padding: 0 0px 60px 0px
 	
@@ -99,7 +105,7 @@
 		margin-bottom: 43px
 		+xxl
 			margin-bottom: 10px
-			font-size: 32px
+			font-size: 27px
 		+lg
 			font-size: 28px
 			line-height: 34px
@@ -141,10 +147,10 @@
 		margin-bottom: 32px
 		+xxl
 			width: 100%
-			padding: 26.5px 63.5px 20.5px
-
+			padding: 20.5px 50px 14.5px
+			font-size: 16px
 		+lg
-			padding: 23.5px 63.5px 17.5px
+			// padding: 23.5px 63.5px 17.5px
 			font-size: 16px
 		+sm
 			font-size: 12px
@@ -156,6 +162,8 @@
 		text-align: center
 		color: rgba(111, 111, 111, 0.75)
 		margin: 0 auto
+		+xxl
+			font-size: 14px
 		p
 			margin-bottom: 0
 
@@ -172,17 +180,20 @@
 	transform: translateX(calc( -50% + 7px ))
 	+xxl
 		top: auto
-		bottom: 0
+		bottom: -30px
+		height: 367px
 	+lg
 		max-width: 100%
 		justify-content: flex-start
 		flex-direction: column
 		height: auto
 	+lg
+		bottom: -10px
+	+md
 		bottom: -80px
 	+sm
 		bottom: auto
-		top: 0
+		top: -50px
 
 	&__item
 		background: #FFFFFF
