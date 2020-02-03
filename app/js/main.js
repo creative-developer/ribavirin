@@ -117,7 +117,8 @@ let owlSettings = {
 	items: 1,
 	margin: 0,
 	nav: false,
-	dots: true
+	dots: true,
+	dotsEach: 1
 }
 
 function articleSlider(){
@@ -142,11 +143,25 @@ function reInitOwl() {
 	articleList.trigger('destroy.owl.carousel').removeClass('owl-carousel');
 }
 
+
+function getData(cb){
+	const xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://www.cbr-xml-daily.ru/daily_json.js')
+	xhr.addEventListener('load', ()=>{
+		const response = JSON.parse(xhr.responseText);
+		cb(response)
+	});
+	xhr.send();
+}
+
 // E-mail Ajax Send
 $('form:not(#ya-form)').submit(function (e) {
 	e.preventDefault();
-
 	let form = $(this);
+	if ($(form.hasClass('order-form'))) {
+		$('.order-form__btn').prop('disabled', true);
+		$('.loader').fadeIn(300);
+	}
 	let formData = {};
 	formData.data = {};
 
@@ -169,6 +184,23 @@ $('form:not(#ya-form)').submit(function (e) {
 		}
 	});
 
+	function redirectYandexMoney(cbc){
+		let elPhone = $('#ya-form input[name="label"]');
+		let elComment = $('#ya-form input[name="comment"]');
+
+		elPhone.val(formData.data.name.value);
+		elComment.val(`${formData.data.name.value} (${formData.data.phone.value})`);
+
+		getData((response) => {
+			let usdRate = response.Valute['USD'].Value;
+			let inputVal = $('input[name="sum"]').val();
+			let qnty = $('input[name="qty"]').val();
+			let newValue = ((qnty * inputVal) * usdRate);
+			$('input[name="sum"]').val(newValue);
+		})
+		cbc(cbc);
+	}
+
 	$.ajax({
 		type: 'POST',
 		url: 'mail/mail.php',
@@ -176,26 +208,37 @@ $('form:not(#ya-form)').submit(function (e) {
 		data: formData,
 	}).done(function (data) {
 		if (data.status === 'success') {
-			if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-				form.find('.form-result').addClass('form-result--success');
+			if (form.hasClass('order-form')) {
+				redirectYandexMoney(()=>{
+					setTimeout(() => {
+						$('#ya-form').submit();
+					}, 500);
+					$('.loader').fadeOut(500);
+				});
 			} else {
-				mfpPopup('#success');
-			}
-
-			setTimeout(function () {
 				if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
-					form.find('.form-result').removeClass('form-result--success');
+					form.find('.form-result').addClass('form-result--success');
+				} else {
+					mfpPopup('#success');
 				}
-				$.magnificPopup.close();
-				form.trigger('reset');
-			}, 3000);
+	
+				setTimeout(function () {
+					if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
+						form.find('.form-result').removeClass('form-result--success');
+					}
+					$.magnificPopup.close();
+					form.trigger('reset');
+				}, 3000);
+			}
 		} else {
 			alert('Ajax result: ' + data.status);
+			$('.loader').fadeOut(500);
 		}
 	});
 	
 	return false;
 });
+
 
 // tabs toggle
 $('.tabs__link').click(function (e) {
@@ -301,7 +344,7 @@ let mfpPopup = function (popupID, source) {
 		preloader: false,
 		midClick: true,
 		removalDelay: 300,
-		closeMarkup: '<button type="button" class="mfp-close">&times;</button>',
+		closeMarkup: '<button type="button" class="mfp-close"><svg class="icon icon--close"><use xlink:href="img/svg-sprite.svg#close"></use></svg></button>',
 		mainClass: 'mfp-fade-zoom',
 		// callbacks: {
 		// 	open: function() {

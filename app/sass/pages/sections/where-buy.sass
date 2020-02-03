@@ -50,6 +50,9 @@
 		padding: 25px 60px
 		margin-bottom: 30px
 		cursor: pointer
+		transition: all 0.3s ease
+		&:hover
+			border-color: #59ACF4
 		+xl
 			padding: 15px 30px
 		+lg
@@ -93,7 +96,26 @@
 		display: flex
 		justify-content: center
 
+
+
 .where-buy-mobile
 	display: none
 	+sm
 		display: block
+		margin-bottom: 46px
+	.owl-dots
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 10px
+	.owl-dot
+		width: 60px
+		height: 2px
+		background: rgba(111, 111, 111, 0.2) !important
+		transition: all 0.3s ease
+		&:focus
+			outline: none
+		&:not(:last-child)
+			margin-right: 10px
+		&.active
+			background: #59ACF4 !important

@@ -41,3 +41,21 @@ section.b-order
 
 			._logo2
 				+icon('logo_short')
+		<form id="ya-form" method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+			<input type="hidden" name="receiver" value="4100111725286960">
+			<input type="hidden" name="targets" value="Оплата - Ribavirin">
+			<input type="hidden" name="label" value="79038774141">
+			<input type="hidden" name="sum" value="49.99" data-type="number">
+			<input type="hidden" name="comment" value="Иванов Иван (+79038774141)">
+
+			//- options
+			<input type="hidden" name="formcomment" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
+			<input type="hidden" name="short-dest" value="Проект «Железный человек»: реактор холодного ядерного синтеза">
+			<input type="hidden" name="quickpay-form" value="small">
+			<input type="hidden" name="need-fio" value="false">
+			<input type="hidden" name="need-email" value="false"> 
+			<input type="hidden" name="need-phone" value="false">
+			<input type="hidden" name="need-address" value="false">
+			<input type="hidden" name="paymentType" value="AC">
+			//- <input type="submit" value="Перевести">
+		</form>
