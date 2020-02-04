@@ -143,13 +143,23 @@ function reInitOwl() {
 	articleList.trigger('destroy.owl.carousel').removeClass('owl-carousel');
 }
 
-
-function getData(cb){
+function redirectYandexMoney(formData){
 	const xhr = new XMLHttpRequest();
+	const elPhone = $('#ya-form input[name="label"]');
+	const elComment = $('#ya-form input[name="comment"]');
+	
 	xhr.open('GET', 'https://www.cbr-xml-daily.ru/daily_json.js')
 	xhr.addEventListener('load', ()=>{
 		const response = JSON.parse(xhr.responseText);
-		cb(response)
+		let usdRate = response.Valute['USD'].Value;
+		let inputVal = $('input[name="sum"]').val();
+		let qnty = $('input[name="qty"]').val();
+		let newValue = ((qnty * inputVal) * usdRate);
+
+		elPhone.val(formData.data.name.value);
+		elComment.val(`${formData.data.name.value} (${formData.data.phone.value})`);
+		$('input[name="sum"]').val(newValue);
+		$('#ya-form').submit();
 	});
 	xhr.send();
 }
@@ -184,23 +194,6 @@ $('form:not(#ya-form)').submit(function (e) {
 		}
 	});
 
-	function redirectYandexMoney(cbc){
-		let elPhone = $('#ya-form input[name="label"]');
-		let elComment = $('#ya-form input[name="comment"]');
-
-		elPhone.val(formData.data.name.value);
-		elComment.val(`${formData.data.name.value} (${formData.data.phone.value})`);
-
-		getData((response) => {
-			let usdRate = response.Valute['USD'].Value;
-			let inputVal = $('input[name="sum"]').val();
-			let qnty = $('input[name="qty"]').val();
-			let newValue = ((qnty * inputVal) * usdRate);
-			$('input[name="sum"]').val(newValue);
-		})
-		cbc(cbc);
-	}
-
 	$.ajax({
 		type: 'POST',
 		url: 'mail/mail.php',
@@ -209,12 +202,7 @@ $('form:not(#ya-form)').submit(function (e) {
 	}).done(function (data) {
 		if (data.status === 'success') {
 			if (form.hasClass('order-form')) {
-				redirectYandexMoney(()=>{
-					setTimeout(() => {
-						$('#ya-form').submit();
-					}, 500);
-					$('.loader').fadeOut(500);
-				});
+				redirectYandexMoney(formData);
 			} else {
 				if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
 					form.find('.form-result').addClass('form-result--success');
