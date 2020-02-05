@@ -152,9 +152,9 @@ function redirectYandexMoney(formData){
 	xhr.addEventListener('load', ()=>{
 		const response = JSON.parse(xhr.responseText);
 		let usdRate = response.Valute['USD'].Value;
-		let inputVal = $('input[name="sum"]').val();
+		let dataPrice = $('.price__amount').attr('data-price');
 		let qnty = $('input[name="qty"]').val();
-		let newValue = ((qnty * inputVal) * usdRate);
+		let newValue = ((qnty * dataPrice) * usdRate);
 
 		elPhone.val(formData.data.name.value);
 		elComment.val(`${formData.data.name.value} (${formData.data.phone.value})`);
